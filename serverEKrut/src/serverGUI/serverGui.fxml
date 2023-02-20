@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="serverController.ClientStatusController">
+   <children>
+      <Pane layoutX="-8.0" prefHeight="105.0" prefWidth="906.0" style="-fx-background-color: #3095e5;">
+         <children>
+            <Label layoutX="361.0" layoutY="34.0" text="Server Area">
+               <font>
+                  <Font size="26.0" />
+               </font></Label>
+            <ImageView fitHeight="45.0" fitWidth="47.0" layoutX="847.0" layoutY="12.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssets/x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox layoutX="171.0" layoutY="160.0" prefHeight="237.0" prefWidth="181.0">
+         <children>
+            <TextField fx:id="IPaddress" prefHeight="29.0" prefWidth="87.0">
+               <VBox.margin>
+                  <Insets bottom="23.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="Port">
+               <VBox.margin>
+                  <Insets bottom="23.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="DBpath">
+               <VBox.margin>
+                  <Insets bottom="23.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="Db_UserName">
+               <VBox.margin>
+                  <Insets bottom="23.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="DB_Password" />
+         </children>
+      </VBox>
+      <VBox layoutX="14.0" layoutY="160.0" prefHeight="247.0" prefWidth="100.0">
+         <children>
+            <Label style="-fx-underline: true;" text=" IP Address">
+               <VBox.margin>
+                  <Insets bottom="34.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label style="-fx-underline: true;" text="port">
+               <VBox.margin>
+                  <Insets bottom="34.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label style="-fx-underline: true;" text="DB name">
+               <VBox.margin>
+                  <Insets bottom="34.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label style="-fx-underline: true;" text="DB user name">
+               <VBox.margin>
+                  <Insets bottom="34.0" />
+               </VBox.margin>
+            </Label>
+            <Label style="-fx-underline: true;" text="DB password">
+               <VBox.margin>
+                  <Insets bottom="34.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="57.0" layoutY="123.0" prefHeight="21.0" prefWidth="188.0" text="Server Connection" />
+      <Label layoutX="594.0" layoutY="123.0" text="Connected Clients" />
+      <TableView fx:id="clientTable" layoutX="436.0" layoutY="156.0" prefHeight="194.0" prefWidth="433.0" AnchorPane.rightAnchor="26.0">
+         <columns>
+            <TableColumn fx:id="ipColumn" prefWidth="144.0" text="IP" />
+            <TableColumn fx:id="hostColumn" prefWidth="144.0" text="Host" />
+            <TableColumn fx:id="statusColumn" prefWidth="160.0" text="Status" />
+         </columns>
+      </TableView>
+      <Button layoutX="503.0" layoutY="397.0" mnemonicParsing="false" onMouseClicked="#connectServer" prefHeight="38.0" prefWidth="100.0" text="Start Server" />
+      <Text fx:id="connectedMessage" layoutX="603.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.00000700354576" />
+      <Button layoutX="678.0" layoutY="397.0" mnemonicParsing="false" onAction="#importUsers" prefHeight="38.0" prefWidth="100.0" text="Import Users" />
+ <Label layoutX="236.0" layoutY="441.0" prefHeight="25.0" prefWidth="233.0" text="User Data for Smart phone simulation " underline="true">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="smartPhoneSimulationComboBox" layoutX="245.0" layoutY="477.0" onAction="#clickOnsmartPhoneSimulationComboBox" prefHeight="29.0" prefWidth="188.0" />
+      <ComboBox fx:id="installationType" layoutX="39.0" layoutY="465.0" prefHeight="29.0" prefWidth="150.0" />
+      <ComboBox fx:id="deviceID" layoutX="39.0" layoutY="507.0" prefWidth="150.0" />
+      <Text layoutX="39.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installation:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="installBtn" disable="true" layoutX="39.0" layoutY="549.0" mnemonicParsing="false" onAction="#clickInstall" prefHeight="29.0" prefWidth="150.0" text="Install" />
+      <Separator layoutX="212.0" layoutY="433.0" orientation="VERTICAL" prefHeight="159.0" prefWidth="7.0" />
+   </children>
+</AnchorPane>
