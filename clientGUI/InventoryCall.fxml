@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.InventoryCallMangementController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="575.0" prefHeight="60.0" prefWidth="759.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <Text fx:id="txtRegion" layoutX="305.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="149.99998837709427">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="97.0" prefWidth="759.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <Text layoutX="229.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Call Management">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="705.0" layoutY="14.0" onMouseClicked="#closeApp">
+               <image>
+                  <Image url="@../GuiAssets/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="32.0" layoutY="25.0" onMouseClicked="#goBack">
+               <image>
+                  <Image url="@../GuiAssets/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="inventoryCallTable" layoutY="97.0" prefHeight="199.0" prefWidth="759.0">
+         <columns>
+            <TableColumn fx:id="callID" prefWidth="85.0" text="CallID" />
+            <TableColumn fx:id="DeviceID" prefWidth="163.0" text="DeviceID" />
+            <TableColumn fx:id="EmployeeID" prefWidth="177.0" text="EmployeeID" />
+            <TableColumn fx:id="dateCol" prefWidth="194.0" text="Date" />
+            <TableColumn fx:id="status" prefWidth="137.0" text="Status" />
+         </columns>
+      </TableView>
+      <Separator layoutY="282.0" prefHeight="40.0" prefWidth="759.0" />
+      <Text layoutX="293.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Inventory Call" underline="true">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="comboDevice" layoutX="161.0" layoutY="426.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboEmployee" layoutX="445.0" layoutY="426.0" prefWidth="150.0" />
+      <Label layoutX="161.0" layoutY="398.0" text="Device:" />
+      <Label layoutX="445.0" layoutY="398.0" text="Employee:" />
+      <Button layoutX="299.0" layoutY="516.0" mnemonicParsing="false" onAction="#clickCreateCall" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #493dc2;" text="Create Call" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
