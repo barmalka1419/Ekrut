@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.CustomerRegistrationController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="669.0">
+         <children>
+            <AnchorPane layoutX="-1.0" prefHeight="97.0" prefWidth="669.0" style="-fx-background-color: #ebd8b1;">
+               <children>
+                  <Text layoutX="213.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Registration">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="615.0" layoutY="17.0" onMouseClicked="#closeApp">
+                     <image>
+                        <Image url="@../GuiAssets/exit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="26.0" layoutY="24.0" onMouseClicked="#goBack">
+                     <image>
+                        <Image url="@../GuiAssets/back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="505.0" prefHeight="77.0" prefWidth="669.0" style="-fx-background-color: #ebd8b1;">
+               <children>
+                  <Button fx:id="btnAddCustomer" disable="true" layoutX="232.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickAddCustomer" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #493dc2;" text="Add Customer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="username" layoutX="267.0" layoutY="127.0" />
+            <Label layoutX="183.0" layoutY="131.0" text="Username:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="userTable" layoutX="1.0" layoutY="223.0" prefHeight="97.0" prefWidth="667.0">
+              <columns>
+                <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="firstName" prefWidth="110.0" text="First Name" />
+                  <TableColumn fx:id="lastName" prefWidth="130.0" text="Last Name" />
+                  <TableColumn fx:id="email" prefWidth="148.0" text="Email" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="201.0" text="Phone Number" />
+              </columns>
+            </TableView>
+            <TextField fx:id="creditCardNumber" disable="true" layoutX="267.0" layoutY="406.0" />
+            <Label layoutX="246.0" layoutY="359.0" text="Add Credit Card Number" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="438.0" layoutY="129.0" onMouseClicked="#clickSearchUsername" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssets/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="221.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssets/credit-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="usernameErrorMessage" fill="#a80000" layoutX="246.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="175.99999889731407">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="creditCardErrorMessage" fill="#a80000" layoutX="167.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="362.7016596496105">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

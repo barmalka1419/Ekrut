@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.RegionalManagerMenuController">
+   <children>
+      <AnchorPane prefHeight="97.0" prefWidth="586.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <Text layoutX="163.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regional Manager Menu">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="532.0" layoutY="14.0" onMouseClicked="#closeApp">
+               <image>
+                  <Image url="@../GuiAssets/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="120.0" layoutX="9.0" layoutY="8.0">
+               <image>
+                  <Image url="@../GuiAssets/Restaurant%20Food1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="191.0" layoutY="150.0" mnemonicParsing="false" onAction="#clickViewReport" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #493dc2;" text="View Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="191.0" layoutY="232.0" mnemonicParsing="false" onAction="#clickRegistrationRequest" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #493dc2;" text="Registration Request" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="191.0" layoutY="314.0" mnemonicParsing="false" onAction="#clickUpdateThreshold" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #493dc2;" text="Update Threshold" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="470.0" prefHeight="69.0" prefWidth="586.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <Text fx:id="txtRegion" layoutX="435.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="137.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="30.0" layoutY="17.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #880033;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text fx:id="welcomeMessage" layoutX="15.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="480.9999998807907">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Button layoutX="191.0" layoutY="394.0" mnemonicParsing="false" onAction="#clickCreateInventoryCall" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #493dc2;" text="Create Invetory Call" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

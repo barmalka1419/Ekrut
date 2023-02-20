@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.DeliveryUserManagementController">
+   <children>
+      <AnchorPane layoutY="589.0" prefHeight="60.0" prefWidth="934.0" style="-fx-background-color: #ebd8b1;" />
+      <AnchorPane prefHeight="97.0" prefWidth="934.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <Text layoutX="384.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Orders">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="880.0" layoutY="12.0" onMouseClicked="#closeApp">
+               <image>
+                  <Image url="@../GuiAssets/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="32.0" layoutY="25.0" onMouseClicked="#goBack">
+               <image>
+                  <Image url="@../GuiAssets/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="404.0" layoutY="515.0" mnemonicParsing="false" onAction="#clickSave" prefHeight="53.0" prefWidth="127.0" style="-fx-background-color: #493dc2;" text="   Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssets/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="deliveryTable" layoutY="97.0" prefHeight="399.0" prefWidth="934.0">
+         <columns>
+            <TableColumn fx:id="orderID" prefWidth="131.0" style="-fx-alignment: center;" text="orderID" />
+            <TableColumn fx:id="address" prefWidth="340.0" style="-fx-alignment: center;" text="address" />
+            <TableColumn fx:id="deviceID" prefWidth="87.0" style="-fx-alignment: center;" text="DeviceID" />
+            <TableColumn fx:id="estimatedDeliveryTime" minWidth="0.0" prefWidth="229.0" style="-fx-alignment: center;" text="estimatedDeliveryTime" />
+            <TableColumn fx:id="status" prefWidth="140.0" style="-fx-alignment: center;" text="status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
