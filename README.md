@@ -1,5 +1,5 @@
 # Ekrut
-Ekrut is a food order system developed in JavaFX.
+Ekrut is a food ordering system developed in JavaFX.
 The system is a client-server based system and allows simulating ordering from a vending machine and ordering remotely.
 
 Contributors:
