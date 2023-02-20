@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.RemoteOrderMenuController">
+   <children>
+      <Button layoutX="213.0" layoutY="313.0" mnemonicParsing="false" onAction="#clickDeliveryOrder" prefHeight="21.0" prefWidth="187.0" style="-fx-background-color: #493dc2;" text="Delivery Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="214.0" layoutY="197.0" mnemonicParsing="false" onAction="#clickPickupOrder" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #493dc2;" text="Pick Up Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane prefHeight="93.0" prefWidth="553.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="120.0" layoutX="11.0" layoutY="6.0">
+               <image>
+                  <Image url="@../GuiAssets/Restaurant%20Food1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="160.0" layoutY="21.0" prefHeight="51.0" prefWidth="273.0" text="Welcome to Ekrut Remote orders">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="499.0" layoutY="14.0" onMouseClicked="#closeApp">
+               <image>
+                  <Image url="@../GuiAssets/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="191.0" layoutY="106.0" text="Please choose an option:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="21.0" layoutY="419.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #880033;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="176.0" layoutY="200.0">
+         <image>
+            <Image url="@../GuiAssets/pickup.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="NameLable" layoutX="30.0" layoutY="106.0" prefHeight="21.0" prefWidth="144.0" text="Hello Julia" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="selectDevice" layoutX="213.0" layoutY="155.0" prefHeight="25.0" prefWidth="187.0" promptText="choose order device" style="-fx-border-color: #493dc2;" />
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="174.0" layoutY="153.0">
+         <image>
+            <Image url="@../GuiAssets/location.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="213.0" layoutY="381.0" mnemonicParsing="false" onAction="#clickManageOrder" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #493dc2;" text="Manage Orders" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Separator layoutX="176.0" layoutY="355.0" prefHeight="25.0" prefWidth="238.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="176.0" layoutY="383.0">
+         <image>
+            <Image url="@../GuiAssets/manage.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="178.0" layoutY="239.0" prefHeight="25.0" prefWidth="238.0" />
+      <ComboBox fx:id="selectDelivery" layoutX="212.0" layoutY="268.0" prefHeight="25.0" prefWidth="187.0" promptText="choose delivery center" style="-fx-border-color: #493dc2;" />
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="173.0" layoutY="266.0">
+         <image>
+            <Image url="@../GuiAssets/location.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="210.0" layoutY="133.0" prefHeight="17.0" prefWidth="187.0" text="error" textFill="#f80707" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="170.0" layoutY="314.0">
+         <image>
+            <Image url="@../GuiAssets/delivery.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

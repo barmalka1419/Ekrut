@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.ViewSalesController">
+   <children>
+      <AnchorPane prefHeight="96.0" prefWidth="934.0" style="-fx-background-color: #ebd8b1;">
+         <children>
+            <Text layoutX="408.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Sales">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="880.0" layoutY="11.0" onMouseClicked="#closeApp">
+               <image>
+                  <Image url="@../GuiAssets/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="33.0" layoutY="28.0" onMouseClicked="#goBack">
+               <image>
+                  <Image url="@../GuiAssets/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="salesTable" layoutY="96.0" prefHeight="379.0" prefWidth="934.0">
+        <columns>
+          <TableColumn fx:id="saleID" prefWidth="75.0" text="saleID" />
+          <TableColumn fx:id="startDate" prefWidth="75.0" text="StartDate" />
+            <TableColumn fx:id="endDate" prefWidth="90.0" text="endDate" />
+            <TableColumn fx:id="discountSize" prefWidth="100.0" text="discountSize" />
+            <TableColumn fx:id="region" prefWidth="71.0" text="region" />
+            <TableColumn fx:id="days" prefWidth="87.0" text="days" />
+            <TableColumn fx:id="startHour" prefWidth="103.0" text="startHour" />
+            <TableColumn fx:id="endHour" prefWidth="118.0" text="endHour" />
+            <TableColumn fx:id="saleType" prefWidth="118.0" text="saleType" />
+            <TableColumn fx:id="isActive" prefWidth="96.0" text="isActive" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutY="473.0" prefHeight="45.0" prefWidth="934.0" style="-fx-background-color: #ebd8b1;" />
+   </children>
+</AnchorPane>

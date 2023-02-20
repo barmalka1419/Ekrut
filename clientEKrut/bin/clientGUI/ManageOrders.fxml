@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-4.0" layoutY="-1.0" prefHeight="81.0" prefWidth="903.0" style="-fx-background-color: #87b7ff;">
+         <children>
+            <Label layoutX="292.0" layoutY="16.0" prefHeight="51.0" prefWidth="319.0" text="Order Deliveries Management">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="26.0" layoutY="21.0">
+               <image>
+                  <Image url="@../GuiAssets/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="856.0" layoutY="9.0">
+               <image>
+                  <Image url="@../GuiAssets/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView layoutY="80.0" prefHeight="337.0" prefWidth="899.0">
+        <columns>
+          <TableColumn prefWidth="85.0" text="customerID" />
+          <TableColumn prefWidth="107.0" text="orderNumber" />
+            <TableColumn prefWidth="145.0" text="orderDate" />
+            <TableColumn prefWidth="152.0" text="estimatedDelivery" />
+            <TableColumn prefWidth="88.0" text="price" />
+            <TableColumn prefWidth="179.0" text="orderStatus" />
+            <TableColumn prefWidth="142.0" text="Confirm" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

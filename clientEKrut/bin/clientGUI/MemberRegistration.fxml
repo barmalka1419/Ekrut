@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.MemberRegistrationController">
+   <children>
+      <AnchorPane layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="669.0">
+         <children>
+            <AnchorPane layoutX="-1.0" prefHeight="97.0" prefWidth="669.0" style="-fx-background-color: #ebd8b1;">
+               <children>
+                  <Text layoutX="219.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Registration">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="615.0" layoutY="17.0" onMouseClicked="#closeApp">
+                     <image>
+                        <Image url="@../GuiAssets/exit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="26.0" layoutY="24.0" onMouseClicked="#goBack">
+                     <image>
+                        <Image url="@../GuiAssets/back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-1.0" layoutY="431.0" prefHeight="76.0" prefWidth="669.0" style="-fx-background-color: #ebd8b1;">
+               <children>
+                  <Button fx:id="btnAddMember" disable="true" layoutX="232.0" layoutY="16.0" mnemonicParsing="false" onAction="#clickAddMember" prefHeight="45.0" prefWidth="206.0" style="-fx-background-color: #493dc2;" text="Add Member" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="username" layoutX="253.0" layoutY="132.0" />
+            <Label layoutX="167.0" layoutY="136.0" text="Username:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="userTable" layoutX="1.0" layoutY="229.0" prefHeight="97.0" prefWidth="667.0">
+               <columns>
+                  <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="firstName" prefWidth="110.0" text="First Name" />
+                  <TableColumn fx:id="lastName" prefWidth="130.0" text="Last Name" />
+                  <TableColumn fx:id="email" prefWidth="148.0" text="Email" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="201.0" text="Phone Number" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="427.0" layoutY="134.0" onMouseClicked="#clickSearchUsername" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssets/search.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="usernameErrorMessage" fill="#a80000" layoutX="246.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="175.99999889731407">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
