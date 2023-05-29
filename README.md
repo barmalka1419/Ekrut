@@ -5,7 +5,7 @@ The system is a client-server based system and allows simulating ordering from a
 Contributors:
 Ofir Sahaf,
 Elior Malik,
-Bar Malka(@barmalka1419),
+Bar Malka,
 Guy Banbo,
 Yehuda Bitton,
 Bar Matzliah.
